@@ -12,11 +12,6 @@ client.on('message', message => {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     **GOMING SOON** ' ,' **SpeedPermium** ')
-
-
-
-
-
 .setColor('#24efbd')
 message.channel.sendEmbed(embed);
 }
