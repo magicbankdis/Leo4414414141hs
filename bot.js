@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const prefix = '--SP';
 client.on('ready', function(){    
     var ms = 40000 ;    
-    var setGame = ['--SPhelp'];    
+    var setGame = ['SPEED PERMIUM','GOMING SOON'];    
     var i = -1;    
     var j = 0;    
     setInterval(function (){    
