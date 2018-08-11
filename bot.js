@@ -2,10 +2,24 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '--SP';
-client.on('ready', () => {
-  client.user.setActivity("--SPhelp",{type: 'WATCHING'})
-
+client.on('ready', function(){    
+    var ms = 40000 ;    
+    var setGame = ['--SPhelp'];    
+    var i = -1;    
+    var j = 0;    
+    setInterval(function (){    
+        if( i == -1 ){    
+j = 1;    
+       }    
+        if( i == (setGame.length)-1 ){    
+            j = -1;    
+      }    
+       i = i+j;    
+        client.user.setGame(setGame[i],`http://www.youtube.com/gg`);    
+}, ms);    
+    
 });
+
 
 client.on('message', message => {
     if (message.content.startsWith("--SAhelp")) {
@@ -16,21 +30,6 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
-
-
-module.exports.run = async (bot, message, args) => {
-
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
-  if(!args[0]) return message.channel.send("no");
-  message.channel.bulkDelete(args[0]).then(() => {
-  message.channel.send(`Clear ${args[0]} messages.`).then(msg => msg.delete(2000));
-});
-
-}
-
-module.exports.help = {
-  name: "clear"
-}
 
 
 
