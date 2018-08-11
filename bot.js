@@ -17,19 +17,21 @@ message.channel.sendEmbed(embed);
 }
 });
 
-client.on("message", message => {
-    var prefix = "!"
-    if (!message.content.startsWith(prefix)) return;
-      let command = message.content.split(" ")[0];
-      command = command.slice(prefix.length);
-        if(command === "skin") {
-                const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
-    message.channel.send(image)
-        }
-    });
+const Discord = require("discord.js");
 
+module.exports.run = async (bot, message, args) => {
+
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
+  if(!args[0]) return message.channel.send("no");
+  message.channel.bulkDelete(args[0]).then(() => {
+  message.channel.send(`Clear ${args[0]} messages.`).then(msg => msg.delete(2000));
+});
+
+}
+
+module.exports.help = {
+  name: "clear"
+}
 
 
 
