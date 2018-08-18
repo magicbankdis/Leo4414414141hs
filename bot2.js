@@ -90,7 +90,7 @@ var prefix = "$!$";
 
 
 if (message.content.startsWith(prefix + 'playing')) {
-  if (message.author.id !== '337629134371160065') return message.reply('**only for the botowner **')
+  if (message.author.id !== '471788143637430273') return message.reply('**only for the botowner **')
 client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult}** : Playing changed to`)
     message.react("ðŸ‘Œ")
