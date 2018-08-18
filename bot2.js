@@ -334,9 +334,9 @@ client.on('message', message => { //times
 .setColor("#5016f3")
  .setThumbnail(client.user.avatarURL)     
  .setTimestamp()
- .setDescription("Pirates Gaming | هلا فيك في سيرفر  " + `
+ .setDescription("Crayznet  | كريزي نت | هلا فيك في سيرفر  " + `
  **
-support | رابط سيرفر    https://discord.gg/tVbVF4E
+support | رابط سيرفر    https://discord.gg/usXwKDw
  **
 `);
 
@@ -491,7 +491,7 @@ client.on("message", (message) => {
                     .setThumbnail(message.author.displayAvatarURL)
                     .addField(`Message: `, `\n\n\`\`\`${message.content}\`\`\``)
                     .setFooter(`DM Bot Messages | DM Logs`)
-                client.users.get("471788143637430273").send(yumz)
+                client.users.get("480364115605323797").send(yumz)
             }
 });
 
