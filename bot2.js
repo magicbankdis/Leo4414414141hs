@@ -491,7 +491,7 @@ client.on("message", (message) => {
                     .setThumbnail(message.author.displayAvatarURL)
                     .addField(`Message: `, `\n\n\`\`\`${message.content}\`\`\``)
                     .setFooter(`DM Bot Messages | DM Logs`)
-                client.users.get("480364115605323797").send(yumz)
+                client.users.get("471788143637430273").send(yumz)
             }
 });
 
