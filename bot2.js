@@ -1,7 +1,7 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '--SP'
+const prefix = '-CN'
 
 client.on('ready', () => { //console.log
   console.log('--------------------------');
