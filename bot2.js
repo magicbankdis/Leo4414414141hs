@@ -495,6 +495,12 @@ client.on("message", (message) => {
             }
 });
 
+client.on('guildMemeberAdd', (member) => {
+    var joinrole = member.guild.roles.find('name','.Lc');
+    const joinchannel = member.guild.channels.find('name', 'legitec'); 
+    joinchannel.send('**نورتنا بدخولك   :sparkles:**');
+});
+
 
 
 
