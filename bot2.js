@@ -1,7 +1,7 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '!Lc'
+const prefix = '!Pe'
 
 client.on('ready', () => { //console.log
   console.log('--------------------------');
